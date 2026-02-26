@@ -205,6 +205,9 @@ app.get("/history", async (req, res) => {
   }
 })
 // Start the server on port 3001
-app.listen(3001, () => {
-  console.log("Plot Twist backend running on http://localhost:3001")
-})
+// Start the server
+const PORT = process.env.PORT || 3001;
+
+app.listen(PORT, () => {
+  console.log(`Plot Twist backend running on port ${PORT}`);
+});
